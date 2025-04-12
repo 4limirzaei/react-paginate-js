@@ -4,7 +4,7 @@ A **fully customizable and reusable pagination component** built with **React** 
 
 This component can be used in **any React project** (e.g., Vite, CRA, etc.) and is also **compatible with Next.js** (App Router or Pages Router).
 
----
+--
 
 ## ✨ Features
 
@@ -15,7 +15,7 @@ This component can be used in **any React project** (e.g., Vite, CRA, etc.) and 
 - 🔁 Fully controlled component
 - 📦 Lightweight and dependency-free
 
----
+--
 
 ## 🚀 Installation
 
@@ -25,7 +25,7 @@ Install the package via npm or yarn:
 npm install your-pagination-package
 ```
 
----
+--
 
 ## 🧪 Basic Usage
 
@@ -41,7 +41,7 @@ function MyComponent() {
 }
 ```
 
----
+--
 
 ## ⚠️ Next.js Users
 
@@ -51,7 +51,7 @@ If you're using Next.js with the App Router, don’t forget to add the following
 "use client";
 ```
 
----
+--
 
 ## ⚙️ Props
 
