@@ -1,5 +1,3 @@
-"use client";
-
 type PropsType = {
   currentPage: number;
   total: number;
