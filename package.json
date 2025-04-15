@@ -1,6 +1,6 @@
 {
   "name": "react-paginate-js",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A simple ReactJS component for creating pagination.",
   "files": [
     "dist",
@@ -41,13 +41,11 @@
     "tslib": "^2.8.1",
     "typescript": "^5.8.3",
     "rollup": "^4.39.0",
-    "rollup-plugin-postcss": "^4.0.2"
+    "rollup-plugin-postcss": "^4.0.2",
+    "@types/react": "^18"
   },
   "peerDependencies": {
     "react": "^18.0.0 || ^19.1.0",
     "react-dom": "^18.0.0 || ^19.1.0"
-  },
-  "dependencies": {
-    "@types/react": "^18"
   }
 }
