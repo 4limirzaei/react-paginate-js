@@ -1,6 +1,6 @@
 {
   "name": "react-paginate-js",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "A simple ReactJS component for creating pagination.",
   "files": [
     "dist",
@@ -20,7 +20,9 @@
   "keywords": [
     "react",
     "pagination",
-    "paginate"
+    "paginate",
+    "paginator",
+    "nextjs"
   ],
   "author": "Ali Mirzaei",
   "license": "ISC",

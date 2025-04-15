@@ -60,3 +60,67 @@ If you're using Next.js with the App Router, don’t forget to add the following
 | `renderEllipsis`          | `() => ReactNode`                        | `...` span    | Custom ellipsis rendering.                                              |
 | `renderPrevButton`        | `(disabled, onClick) => ReactNode`       | `&lt;` button | Custom "Previous" button.                                               |
 | `renderNextButton`        | `(disabled, onClick) => ReactNode`       | `&gt;` button | Custom "Next" button.                                                   |
+
+## 💡 Fully Customized Example Using Next.js & Tailwind
+
+```tsx
+"use client";
+
+import { useState } from "react";
+import Pagination from "react-paginate-js";
+
+export default function ExamplePage() {
+  const [page, setPage] = useState(0);
+
+  return (
+    <div>
+      <Pagination
+        currentPage={page}
+        total={50}
+        pageSize={5}
+        maxVisiblePages={5}
+        onChange={(page) => setPage(page)}
+        className="flex items-center justify-center gap-2 mt-4"
+        buttonClassName="px-3 py-1 border rounded text-gray-700 hover:bg-gray-100"
+        activeButtonClassName="bg-blue-500 text-white font-bold"
+        disabledButtonClassName="text-gray-400 cursor-not-allowed"
+        renderPrevButton={(disabled, onClick) => (
+          <button
+            disabled={disabled}
+            onClick={onClick}
+            className={`px-3 py-1 border rounded ${
+              disabled ? "text-gray-400" : "hover:bg-gray-100"
+            }`}
+          >
+            Previous
+          </button>
+        )}
+        renderNextButton={(disabled, onClick) => (
+          <button
+            disabled={disabled}
+            onClick={onClick}
+            className={`px-3 py-1 border rounded ${
+              disabled ? "text-gray-400" : "hover:bg-gray-100"
+            }`}
+          >
+            Next
+          </button>
+        )}
+        renderPageButton={(page, isActive, onClick) => (
+          <button
+            onClick={onClick}
+            className={`px-3 py-1 border rounded ${
+              isActive
+                ? "bg-blue-500 text-white font-semibold border border-blue-500"
+                : "hover:bg-gray-100"
+            }`}
+          >
+            {page + 1}
+          </button>
+        )}
+        renderEllipsis={() => <span className="px-2 text-gray-500">...</span>}
+      />
+    </div>
+  );
+}
+```
